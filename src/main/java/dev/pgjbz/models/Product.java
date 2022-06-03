@@ -1,4 +1,4 @@
-package com.ciandt.models;
+package dev.pgjbz.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.ciandt;
+package dev.pgjbz;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;

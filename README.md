@@ -8,6 +8,7 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 You can run your application in dev mode that enables live coding using:
 ```shell script
+docker run -e POSTGRES_DB=quarkus_crud -e POSTGRES_USER=quarkus -e POSTGRES_PASSWORD=quarkus -p 5432:5432 --name quarkus-crud postgres:14-alpine 
 ./mvnw compile quarkus:dev
 ```
 

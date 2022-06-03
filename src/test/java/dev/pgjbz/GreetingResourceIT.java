@@ -1,4 +1,4 @@
-package com.ciandt;
+package dev.pgjbz;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
