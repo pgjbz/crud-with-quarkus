@@ -8,6 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 
 import com.ciandt.models.Product;
 
@@ -22,7 +23,7 @@ public class ProductController {
     @GET
     @Path("{id}")
     @Transactional
-    public Product findById(Long id) {
+    public Product findById(@PathParam(value = "id") Long id) {
         return Product.findById(id);
     }
 
@@ -35,7 +36,7 @@ public class ProductController {
 
     @PUT
     @Path("{id}")
-    public void update(Long id, Product product) {
+    public void update(@PathParam(value = "id") Long id, Product product) {
         Product.findByIdOptional(id).ifPresent(p -> {
             var fromDb = (Product) p;
             fromDb.name = product.name;
